@@ -1,0 +1,32 @@
+package com.bwtakacy.hibernate;
+
+public class MyMapping {
+  private static final long serialVersionUID = 1L;
+  private String id;
+  private String name;
+  private String memo;
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getMemo() {
+    return memo;
+  }
+
+  public void SetMemo(String memo) {
+    this.memo = memo;
+  }
+}

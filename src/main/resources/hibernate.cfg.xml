@@ -10,7 +10,7 @@
       com.mysql.jdbc.Driver
     </property>
     <property name="hibernate.connection.url">
-      jdbc:mysql://localhost:3036/data1
+      jdbc:mysql://localhost:3306/data1
     </property>
     <property name="hibernate.connection.username">
       root

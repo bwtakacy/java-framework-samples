@@ -4,7 +4,7 @@
 <%@page import="org.hibernate.*" %>
 <%@page import="org.hibernate.boot.registry.*" %>
 <%@page import="org.hibernate.service.*" %>
-<%@page import="org.hibernate.cfg.Confiuration" %>
+<%@page import="org.hibernate.cfg.Configuration" %>
 <%@page import="com.bwtakacy.hibernate.*" %>
 <html>
 <head>
@@ -23,7 +23,7 @@ table tr td { padding:5px 10px; background:#dde; color:#333; }
     <tr><th>ID</th><th>NAME</th><th>MEMO</th></tr>
     <%
     Configuration conf = new Configuration().configure();
-    // conf.addResource("map.hbm.xml");
+    conf.addResource("map.hbm.xml");
     StandardServiceRegistryBuilder sb = new
       StandardServiceRegistryBuilder();
     sb.applySettings(conf.getProperties());
@@ -38,11 +38,11 @@ table tr td { padding:5px 10px; background:#dde; color:#333; }
     <tr>
       <td><%=mm.getId()%></td>
       <td><%=mm.getName()%></td>
-      <td><%==mm.getMemo()%></td>
+      <td><%=mm.getMemo()%></td>
     </tr>
     <%
       }
-      ses.close():
+      ses.close();
     %>
   </table>
 </body>

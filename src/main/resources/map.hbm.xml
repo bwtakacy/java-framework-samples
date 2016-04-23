@@ -4,12 +4,12 @@
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <class name="com.bwtakcy.hibernate.MyMapping" table="test1">
+  <class name="com.bwtakacy.hibernate.MyMapping" table="test1">
     <id name="id" type="string" unsaved-value="null" >
       <column name="id" sql-type="char(20)" not-null="true"/>
       <generator class="assigned"/>
     </id>
     <property name="name" type="string" column="name" />
-    <property name="memo" typee="string" column="memo" />
+    <property name="memo" type="string" column="memo" />
   </class>
 </hibernate-mapping>

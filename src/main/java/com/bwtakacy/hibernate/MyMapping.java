@@ -26,7 +26,7 @@ public class MyMapping {
     return memo;
   }
 
-  public void SetMemo(String memo) {
+  public void setMemo(String memo) {
     this.memo = memo;
   }
 }

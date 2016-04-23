@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>serv1</servlet-name>
+    <servlet-class>com.bwtakacy.hibernate.Servlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>serv1</servlet-name>
+    <url-pattern>/serv1</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,18 +1,26 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
-@(title: String)(message: String)(contents: Array[String])
+@(title: String, message: String, myform: Form[HomeController.MyForm])
+@import helper._
 
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
 @main(title) {
-    <h1>@message</h1>
-    <ol>
-    @for(item <- contents){
-        <li><p>@item</p></li>  }
-    </ol>
+    <h1>@title</h1>
+    <p>@message</p>
+    @form(action = routes.HomeController.sendform, args =
+         'id -> "myform") {
+       @inputText(
+         field = myform("name"),
+         args = '_label -> "名前",
+         'placeholder -> "山田太郎"
+       )
+       @inputText(
+         field = myform("mail"),
+         args = '_label -> "メールアドレス",
+         'placeholder -> "aaa@bbb"
+       )
+       @inputText(
+         field = myform("tel"),
+         args = '_label -> "電話番号",
+         'placeholder -> "0000-0000"
+       )
+       <input type="submit">
+    }
 }

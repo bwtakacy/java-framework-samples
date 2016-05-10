@@ -17,7 +17,14 @@ public class HomeController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
-        return ok(index.render("Your new application is ready."));
+        String title = "Play Sample Page";
+        String msg = "Playの世界へようこそ";
+        String[] contents = new String[] {
+            "PlayはJSP/サーブレットとは異なる新しいフレームワークです。",
+            "Scalaという現gんを用いて簡単にコーディングできます。",
+            "HerokuなどのIaaSにも簡単にデプロイできます。"
+        };
+        return ok(index.render(title, msg, contents));
     }
 
 }

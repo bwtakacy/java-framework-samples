@@ -21,7 +21,7 @@ public class HomeController extends Controller {
         String msg = "Playの世界へようこそ";
         String[] contents = new String[] {
             "PlayはJSP/サーブレットとは異なる新しいフレームワークです。",
-            "Scalaという現gんを用いて簡単にコーディングできます。",
+            "Scalaという言語を用いて簡単にコーディングできます。",
             "HerokuなどのIaaSにも簡単にデプロイできます。"
         };
         return ok(index.render(title, msg, contents));

@@ -3,3 +3,18 @@ h1 {
    padding:3px;
    font-size:16pt;
 }
+
+table {
+   padding: 3px;
+   margin: 1px;
+}
+
+th {
+   color: white;
+   background-color:#000099;
+}
+
+td {
+   color: #000066;
+   background-color:#ccccff;
+}

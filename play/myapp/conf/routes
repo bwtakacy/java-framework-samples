@@ -12,4 +12,7 @@ GET     /message                    controllers.AsyncController.message
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-POST    /sendform                   controllers.HomeController.sendform()
+POST    /add                        controllers.HomeController.add()
+GET     /show/:id                   controllers.HomeController.show(id:Long)
+GET     /edit/:id                   controllers.HomeController.edit(id:Long)
+POST    /update/:id                 controllers.HomeController.update(id:Long)

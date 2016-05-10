@@ -1,0 +1,26 @@
+@(title: String, message: String, id: Long, mydata: Form[MyData])
+@import helper._
+
+@main(title) {
+
+    <h1>@title</h1>
+    <p>@message</p>
+    @form(action = routes.HomeController.update(id), args =
+         'id -> "mydata") {
+
+         @inputText(
+             field = mydata("name"),
+             args = '_label -> "名前",
+             'placeholder -> "山田太郎" )
+         @inputText(
+             field = mydata("mail"),
+             args = '_label -> "メールアドレス",
+             'placeholder -> "aaa@bbb"  )
+         @inputText(
+             field = mydata("tel"),
+             args = '_label -> "電話番号",
+             'placeholder -> "0000-0000" )
+
+         <input type="submit">
+     }
+}
